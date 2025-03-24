@@ -1,0 +1,29 @@
+@use "./reset";
+@use "./grid" with (
+  $grid-gutter-width: 0
+);
+@use "./responsive";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+textarea,
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+// Common
+.container {
+}

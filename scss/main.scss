@@ -599,3 +599,50 @@ a {
 }
 
 // Testimonial
+.testimonial {
+  padding-top: 168px;
+  margin-top: 0;
+  align-items: center;
+
+  .testimonial__media {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .testimonial-img-01 {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .testimonial-img-02 {
+      position: relative;
+      left: 200px;
+    }
+
+    .testimonial-dots {
+      position: absolute;
+      bottom: 0;
+      left: 12.5%;
+    }
+  }
+
+  .testimonial__heading {
+    margin: 18px 0 38px;
+    position: relative;
+
+    .testimonial-decor {
+      position: absolute;
+      top: 33%;
+      left: 40%;
+      z-index: -1;
+    }
+  }
+
+  .testimonial__name {
+    margin-top: 18px;
+    color: #aba6b5;
+  }
+}
+
+// Newsletter

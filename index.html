@@ -5,14 +5,472 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Babble - A new era of podcasting for you</title>
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Styles CSS -->
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <h1>Hello</h1>
-      </header>
-    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#!"><img src="./assets/icons/Logo.svg" alt="babble" /></a>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Episodes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Category</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="#665F73"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#!">Blog</a></li>
+            </ul>
+          </nav>
+          <div class="header-action">
+            <a class="login__btn" href="#!">Log in</a>
+            <a class="btn signup__btn" href="#!">Sign up</a>
+          </div>
+        </div>
+        <div class="hero">
+          <div class="hero-media">
+            <div class="hero-media__left-column">
+              <img src="./assets/img/hero-img-01.png" alt="" />
+              <img
+                class="hero-play-btn"
+                src="./assets/icons/hero-play-btn.svg"
+                alt=""
+              />
+              <div class="hero-media__statistics">
+                <p class="hero-media__listeners">Podcast listener</p>
+                <ul class="hero-media__list">
+                  <li class="hero-media__item">
+                    <img src="./assets/img/hero-person-01.png" alt="" />
+                  </li>
+                  <li class="hero-media__item">
+                    <img src="./assets/img/hero-person-02.png" alt="" />
+                  </li>
+                  <li class="hero-media__item">
+                    <img src="./assets/img/hero-person-03.png" alt="" />
+                  </li>
+                  <li class="hero-media__item">+50K</li>
+                </ul>
+              </div>
+            </div>
+            <div class="hero-media__right-column">
+              <div class="hero-media__social">
+                <div class="hero-media__statistics">
+                  <p class="hero-media__numbers">500+</p>
+                  <p class="hero-media__text">Podcasts</p>
+                </div>
+                <ul class="hero-media__social-list">
+                  <li class="hero-media__socia-item">
+                    <img src="./assets/img/hero-social-01.png" alt="" />
+                  </li>
+                  <li class="hero-media__socia-item">
+                    <img src="./assets/img/hero-social-02.png" alt="" />
+                  </li>
+                  <li class="hero-media__socia-item">
+                    <img src="./assets/img/hero-social-03.png" alt="" />
+                  </li>
+                </ul>
+              </div>
+              <img src="./assets/img/hero-img-02.png" alt="" />
+              <div class="hero-media__info">
+                <p class="hero-media__name">Sarah Taylor</p>
+                <p class="hero-media__position">Song podcaster</p>
+              </div>
+              <img
+                class="hero-decor-left"
+                src="./assets/icons/hero-decor-01.svg"
+                alt=""
+              />
+              <img
+                class="hero-decor-right"
+                src="./assets/icons/hero-decor-01.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="hero-content">
+            <h1 class="section-heading-lv1">
+              A new era of podcasting for you<img
+                class="hero-decor-02"
+                src="./assets/icons/hero-decor-02.svg"
+                alt=""
+              />
+            </h1>
+            <p class="section-desc-lv1">
+              Rebuilt for simplicity and speed, so you can spend more time
+              discovering and listening to great podcasts.
+            </p>
+            <div class="hero-content-row">
+              <button class="btn hero__btn">Get Started</button>
+              <div class="hero-content-action">
+                <a class="hero-content-listen-btn" href="#!">Listen now</a>
+                <img src="./assets/icons/hero-play-sm.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <!-- Features-1 -->
+        <section class="features-1">
+          <div class="features-1__content">
+            <h2 class="section-heading-lv2 features-1__heading">
+              We are in the top podcast directories
+              <img
+                class="features-1-decor"
+                src="./assets/icons/feature-1-decor.svg"
+                alt=""
+              />
+            </h2>
+
+            <p class="section-desc-lv2">
+              Rebuilt for simplicity and speed, so you can spend more time
+              discovering and listening to great podcasts. We are everywhere on
+              the internet.
+            </p>
+            <button class="btn features-1__btn">
+              <span>Listen now</span>
+              <img src="./assets/icons/features-1-play.svg" alt="" />
+            </button>
+          </div>
+          <div class="features-1__media">
+            <img
+              class="feature-1-img-01"
+              src="./assets/img/feature-1-img-01.png"
+              alt=""
+            />
+            <img
+              class="feature-1-img-02"
+              src="./assets/img/feature-1-img-02.png"
+              alt=""
+            />
+            <img
+              class="feature-1-img-03"
+              src="./assets/img/feature-1-img-03.png"
+              alt=""
+            />
+            <img
+              class="feature-1-img-04"
+              src="./assets/img/feature-1-img-04.png"
+              alt=""
+            />
+            <img
+              class="feature-1-img-05"
+              src="./assets/img/feature-1-img-05.png"
+              alt=""
+            />
+          </div>
+        </section>
+
+        <!-- Features-2 -->
+        <section class="features-2">
+          <h2 class="section-heading-lv2 features-2__heading">
+            Listen by category
+            <img
+              class="features-2-decor"
+              src="./assets/icons/features-2-decor.svg"
+              alt=""
+            />
+          </h2>
+          <p class="section-desc-lv2 features-2__desc">
+            Listen all kind of podcasts you like by exploring categories. Make
+            your day even better
+          </p>
+          <ul class="features-2-list">
+            <li class="features-2-item">
+              <figure class="features-2-image">
+                <img
+                  src="./assets/img/features-2-img-01.png"
+                  alt=""
+                  class="features-2-img"
+                />
+                <figcaption class="features-2-caption">
+                  <a class="features-2-link" href="#!"
+                    ><span class="features-2-field">Education</span>
+                    <img src="./assets/icons/features-2-right-arrow.svg" alt=""
+                  /></a>
+                  <p class="section-desc-lv3">120 Podcasts Channel</p>
+                </figcaption>
+              </figure>
+            </li>
+            <div class="features-2-big-row">
+              <div class="features-2-row-top">
+                <li class="features-2-item">
+                  <figure class="features-2-image">
+                    <img
+                      src="./assets/img/features-2-img-02.png"
+                      alt=""
+                      class="features-2-img"
+                    />
+                    <figcaption class="features-2-caption">
+                      <a class="features-2-link" href="#!"
+                        ><span class="features-2-field">Healthcare</span>
+                        <img
+                          src="./assets/icons/features-2-right-arrow.svg"
+                          alt=""
+                      /></a>
+                      <p class="section-desc-lv3">120 Podcasts Channel</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="features-2-item">
+                  <figure class="features-2-image">
+                    <img
+                      src="./assets/img/features-2-img-03.png"
+                      alt=""
+                      class="features-2-img"
+                    />
+                    <figcaption class="features-2-caption">
+                      <a class="features-2-link" href="#!"
+                        ><span class="features-2-field">Music</span>
+                        <img
+                          src="./assets/icons/features-2-right-arrow.svg"
+                          alt=""
+                      /></a>
+                      <p class="section-desc-lv3">120 Podcasts Channel</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </div>
+              <div class="features-2-row-bottom">
+                <li class="features-2-item">
+                  <figure class="features-2-image">
+                    <img
+                      src="./assets/img/features-2-img-04.png"
+                      alt=""
+                      class="features-2-img"
+                    />
+                    <figcaption class="features-2-caption">
+                      <a class="features-2-link" href="#!"
+                        ><span class="features-2-field">Fashion</span>
+                        <img
+                          src="./assets/icons/features-2-right-arrow.svg"
+                          alt=""
+                      /></a>
+                      <p class="section-desc-lv3">120 Podcasts Channel</p>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="features-2-item">
+                  <figure class="features-2-image">
+                    <img
+                      src="./assets/img/features-2-img-05.png"
+                      alt=""
+                      class="features-2-img"
+                    />
+                    <figcaption class="features-2-caption">
+                      <a class="features-2-link" href="#!"
+                        ><span class="features-2-field">Comedy</span>
+                        <img
+                          src="./assets/icons/features-2-right-arrow.svg"
+                          alt=""
+                      /></a>
+                      <p class="section-desc-lv3">120 Podcasts Channel</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </div>
+            </div>
+          </ul>
+          <button class="btn features-2__btn">All category</button>
+        </section>
+      </div>
+      <!-- Features-3 -->
+      <section class="features-3">
+        <div class="container">
+          <div class="features-3-row">
+            <h2 class="section-heading-lv2 features-3__heading">
+              Our most popular episodes
+              <img
+                class="features-3-decor"
+                src="./assets/icons/features-3-decor.svg"
+                alt=""
+              />
+            </h2>
+            <button class="btn">All episodes</button>
+          </div>
+          <ul class="features-3-list row">
+            <li class="features-3-item col-xl-6">
+              <article class="row">
+                <div class="features-3-media col-xl-6">
+                  <img src="./assets/img/features-3-img-01.png" alt="" />
+                </div>
+                <div class="features-3-content col-xl-6">
+                  <p class="features-3-times">Episode3 - 1hr 25min</p>
+                  <h3 class="section-heading-lv3">
+                    Should you get outboard audio gear?
+                  </h3>
+                  <p class="section-desc-lv2 features-3__desc">
+                    Is hardware really worth it when it comes to podcasting? The
+                    answer is...it depends.
+                  </p>
+                  <a class="features-3-link" href="#!"
+                    ><span class="features-3__btn">Listen now</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#201830" />
+                      <path
+                        d="M9.85 6.9134C9.91667 6.95189 9.91667 7.04811 9.85 7.0866L5.65 9.51147C5.58333 9.54996 5.5 9.50185 5.5 9.42487V4.57513C5.5 4.49815 5.58333 4.45004 5.65 4.48853L9.85 6.9134Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="features-3-item col-xl-6">
+              <article class="row">
+                <div class="features-3-media col-xl-6">
+                  <img src="./assets/img/features-3-img-02.png" alt="" />
+                </div>
+                <div class="features-3-content col-xl-6">
+                  <p class="features-3-times">Episode3 - 1hr 25min</p>
+                  <h3 class="section-heading-lv3">
+                    Should you get outboard audio gear?
+                  </h3>
+                  <p class="section-desc-lv2 features-3__desc">
+                    Is hardware really worth it when it comes to podcasting? The
+                    answer is...it depends.
+                  </p>
+                  <a class="features-3-link" href="#!"
+                    ><span class="features-3__btn">Listen now</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#201830" />
+                      <path
+                        d="M9.85 6.9134C9.91667 6.95189 9.91667 7.04811 9.85 7.0866L5.65 9.51147C5.58333 9.54996 5.5 9.50185 5.5 9.42487V4.57513C5.5 4.49815 5.58333 4.45004 5.65 4.48853L9.85 6.9134Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="features-3-item col-xl-6">
+              <article class="row row-reverse">
+                <div class="features-3-media col-xl-6">
+                  <img src="./assets/img/features-3-img-03.png" alt="" />
+                </div>
+                <div class="features-3-content col-xl-6">
+                  <p class="features-3-times">Episode3 - 1hr 25min</p>
+                  <h3 class="section-heading-lv3">
+                    Should you get outboard audio gear?
+                  </h3>
+                  <p class="section-desc-lv2 features-3__desc">
+                    Is hardware really worth it when it comes to podcasting? The
+                    answer is...it depends.
+                  </p>
+                  <a class="features-3-link" href="#!"
+                    ><span class="features-3__btn">Listen now</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#201830" />
+                      <path
+                        d="M9.85 6.9134C9.91667 6.95189 9.91667 7.04811 9.85 7.0866L5.65 9.51147C5.58333 9.54996 5.5 9.50185 5.5 9.42487V4.57513C5.5 4.49815 5.58333 4.45004 5.65 4.48853L9.85 6.9134Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="features-3-item col-xl-6">
+              <article class="row row-reverse">
+                <div class="features-3-media col-xl-6">
+                  <img src="./assets/img/features-3-img-04.png" alt="" />
+                </div>
+                <div class="features-3-content col-xl-6">
+                  <p class="features-3-times">Episode3 - 1hr 25min</p>
+                  <h3 class="section-heading-lv3">
+                    Should you get outboard audio gear?
+                  </h3>
+                  <p class="section-desc-lv2 features-3__desc">
+                    Is hardware really worth it when it comes to podcasting? The
+                    answer is...it depends.
+                  </p>
+                  <a class="features-3-link" href="#!"
+                    ><span class="features-3__btn">Listen now</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <circle cx="7" cy="7" r="7" fill="#201830" />
+                      <path
+                        d="M9.85 6.9134C9.91667 6.95189 9.91667 7.04811 9.85 7.0866L5.65 9.51147C5.58333 9.54996 5.5 9.50185 5.5 9.42487V4.57513C5.5 4.49815 5.58333 4.45004 5.65 4.48853L9.85 6.9134Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <svg
+            class="features-3__dots-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            width="52"
+            height="12"
+            viewBox="0 0 52 12"
+            fill="none"
+          >
+            <circle cx="6" cy="6" r="6" fill="#936CDD" />
+            <circle cx="28" cy="6" r="4" fill="#D8D5DE" />
+            <circle cx="48" cy="6" r="4" fill="#D8D5DE" />
+          </svg>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Testimonial -->
+        <section class="testimonial"></section>
+      </div>
+    </main>
   </body>
 </html>

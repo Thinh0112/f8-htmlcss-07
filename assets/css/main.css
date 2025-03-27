@@ -1516,7 +1516,7 @@ a {
 }
 
 .testimonial {
-  padding-top: 168px;
+  padding: 168px 0 160px;
   margin-top: 0;
   align-items: center;
 }
@@ -1552,6 +1552,107 @@ a {
 .testimonial .testimonial__name {
   margin-top: 18px;
   color: #aba6b5;
+}
+
+.newsletter {
+  padding: 100px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  position: relative;
+}
+.newsletter .newsletter-row {
+  display: flex;
+  gap: 30px;
+}
+.newsletter .newsletter-row .newsletter__heading {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.newsletter .newsletter-row .newsletter__heading .newsletter-decor {
+  position: absolute;
+  top: 77%;
+  left: -0.5%;
+  z-index: -1;
+}
+.newsletter .newsletter-form {
+  margin-top: 70px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.newsletter .newsletter-form .newsletter-name__input,
+.newsletter .newsletter-form .newsletter-email__input {
+  padding: 18px 28px;
+  width: 100%;
+  border-radius: 8px;
+  background: #2b213f;
+  border: none;
+  color: #fff;
+}
+.newsletter .newsletter-form .newsletter-name__input::placeholder,
+.newsletter .newsletter-form .newsletter-email__input::placeholder {
+  color: #aba6b5;
+}
+.newsletter .newsletter-form .newsletter__btn {
+  background: #936cdd;
+  flex-shrink: 0;
+}
+.newsletter .newsletter-star-1,
+.newsletter .newsletter-star-2,
+.newsletter .newsletter-star-3 {
+  position: absolute;
+}
+.newsletter .newsletter-star-1 {
+  top: 26px;
+  left: 528px;
+}
+.newsletter .newsletter-star-2 {
+  top: 180px;
+  right: 27px;
+}
+.newsletter .newsletter-star-3 {
+  left: 35px;
+  bottom: 45px;
+}
+
+.footer {
+  padding: 104px 0 30px;
+  background-color: #fff8f3;
+}
+.footer .footer-inner {
+  display: flex;
+  gap: 116px;
+}
+.footer .footer-inner .footer__copyright {
+  margin: 14px 0 18px;
+  width: 270px;
+}
+.footer .footer-right {
+  display: flex;
+  gap: 90px;
+}
+.footer .footer-right .footer__heading {
+  margin-bottom: 24px;
+  width: auto;
+}
+.footer .footer-right .footer-list .footer-item {
+  padding: 8px 0;
+}
+.footer .footer-right .footer-list .footer-item .footer-link {
+  color: #665f73;
+  line-height: 1.75;
+}
+.footer .footer-right .footer-list .footer-item:hover .footer-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer .footer-right .footer-list .footer-item:first-child {
+  padding-top: 0;
+}
+.footer .footer-right .footer-social-list {
+  display: flex;
+  gap: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */

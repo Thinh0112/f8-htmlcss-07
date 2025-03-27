@@ -600,7 +600,7 @@ a {
 
 // Testimonial
 .testimonial {
-  padding-top: 168px;
+  padding: 168px 0 160px;
   margin-top: 0;
   align-items: center;
 
@@ -646,3 +646,126 @@ a {
 }
 
 // Newsletter
+.newsletter {
+  padding: 100px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  position: relative;
+
+  .newsletter-row {
+    display: flex;
+    gap: 30px;
+
+    .newsletter__heading {
+      color: #fff;
+      position: relative;
+      z-index: 1;
+
+      .newsletter-decor {
+        position: absolute;
+        top: 77%;
+        left: -0.5%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .newsletter-form {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    .newsletter-name__input,
+    .newsletter-email__input {
+      padding: 18px 28px;
+      width: 100%;
+      border-radius: 8px;
+      background: #2b213f;
+      border: none;
+      color: #fff;
+    }
+
+    .newsletter-name__input::placeholder,
+    .newsletter-email__input::placeholder {
+      color: #aba6b5;
+    }
+
+    .newsletter__btn {
+      background: #936cdd;
+      flex-shrink: 0;
+    }
+  }
+
+  .newsletter-star-1,
+  .newsletter-star-2,
+  .newsletter-star-3 {
+    position: absolute;
+  }
+
+  .newsletter-star-1 {
+    top: 26px;
+    left: 528px;
+  }
+
+  .newsletter-star-2 {
+    top: 180px;
+    right: 27px;
+  }
+
+  .newsletter-star-3 {
+    left: 35px;
+    bottom: 45px;
+  }
+}
+
+// Footer
+.footer {
+  padding: 104px 0 30px;
+  background-color: #fff8f3;
+
+  .footer-inner {
+    display: flex;
+    gap: 116px;
+
+    .footer__copyright {
+      margin: 14px 0 18px;
+      width: 270px;
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    gap: 90px;
+
+    .footer__heading {
+      margin-bottom: 24px;
+      width: auto;
+    }
+
+    .footer-list {
+      .footer-item {
+        padding: 8px 0;
+
+        .footer-link {
+          color: #665f73;
+          line-height: 1.75;
+        }
+
+        &:hover .footer-link {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
+      .footer-item:first-child {
+        padding-top: 0;
+      }
+    }
+
+    .footer-social-list {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}

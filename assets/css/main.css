@@ -1003,6 +1003,19 @@ table {
     --grid-gutter-y: 90px;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .container {
+    --grid-gutter-x: 36px;
+    --grid-gutter-y: 36px;
+  }
+  .header .header-inner .nav-list,
+  .header .header-inner .header-action {
+    display: none;
+  }
+  .header .header-inner .mobile-menu {
+    display: block;
+  }
+}
 *,
 ::before,
 ::after {
@@ -1162,6 +1175,9 @@ a {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.75;
+}
+.header .header-inner .mobile-menu {
+  display: none;
 }
 .header .hero {
   display: flex;
@@ -1517,39 +1533,55 @@ a {
 
 .testimonial {
   padding: 168px 0 160px;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::after {
+  content: "";
+  width: 287px;
+  height: 287px;
+  border-radius: 100%;
+  opacity: 0.4;
+  background: #ff9051;
+  filter: blur(129px);
+  position: absolute;
+  top: 160px;
+  right: -297px;
+}
+.testimonial .testimonial-inner {
   margin-top: 0;
   align-items: center;
 }
-.testimonial .testimonial__media {
+.testimonial .testimonial-inner .testimonial__media {
   margin-top: 0;
   display: flex;
   align-items: center;
   position: relative;
 }
-.testimonial .testimonial__media .testimonial-img-01 {
+.testimonial .testimonial-inner .testimonial__media .testimonial-img-01 {
   position: absolute;
   z-index: 1;
 }
-.testimonial .testimonial__media .testimonial-img-02 {
+.testimonial .testimonial-inner .testimonial__media .testimonial-img-02 {
   position: relative;
   left: 200px;
 }
-.testimonial .testimonial__media .testimonial-dots {
+.testimonial .testimonial-inner .testimonial__media .testimonial-dots {
   position: absolute;
   bottom: 0;
   left: 12.5%;
 }
-.testimonial .testimonial__heading {
+.testimonial .testimonial-inner .testimonial__heading {
   margin: 18px 0 38px;
   position: relative;
 }
-.testimonial .testimonial__heading .testimonial-decor {
+.testimonial .testimonial-inner .testimonial__heading .testimonial-decor {
   position: absolute;
   top: 33%;
   left: 40%;
   z-index: -1;
 }
-.testimonial .testimonial__name {
+.testimonial .testimonial-inner .testimonial__name {
   margin-top: 18px;
   color: #aba6b5;
 }

@@ -1,0 +1,21 @@
+@media screen and (max-width: 575.98px) {
+  // Common
+  .container {
+    --grid-gutter-x: 36px;
+    --grid-gutter-y: 36px;
+  }
+
+  // Header
+  .header {
+    .header-inner {
+      .nav-list,
+      .header-action {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+  }
+}

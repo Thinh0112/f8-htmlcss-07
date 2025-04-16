@@ -1,27 +1,5 @@
-@use "./reset";
-@use "./grid";
-@use "./responsive";
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-textarea,
-input {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-body {
-  font-size: 1.6rem;
-}
+@use "./base";
+@use "./abstracts";
 
 // Common
 :root {
@@ -35,6 +13,11 @@ a {
 .container {
   padding-left: 0;
   padding-right: 0;
+
+  @include abstracts.breakpoint(sm) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .btn {
@@ -66,6 +49,12 @@ a {
   line-height: 1.14;
   position: relative;
   z-index: 1;
+
+  @include abstracts.breakpoint(sm) {
+    width: auto;
+    font-size: 3.6rem;
+    line-height: 127.778%;
+  }
 }
 
 .section-heading-lv2 {
@@ -91,6 +80,13 @@ a {
   color: #665f73;
   font-size: 1.8rem;
   line-height: 1.66;
+
+  @include abstracts.breakpoint(sm) {
+    margin-top: 12px;
+    width: auto;
+    font-size: 1.4rem;
+    line-height: 171.429%;
+  }
 }
 
 .section-desc-lv2 {
@@ -111,14 +107,27 @@ a {
   padding: 42px 0 140px;
   background-color: #fff8f3;
 
+  @include abstracts.breakpoint(sm) {
+    padding: 20px 0 32px;
+  }
+
   .header-inner {
     margin-bottom: 110px;
     display: flex;
     align-items: center;
 
+    @include abstracts.breakpoint(sm) {
+      margin-bottom: 42px;
+      justify-content: space-between;
+    }
+
     .nav-list {
       margin-left: 241px;
       display: flex;
+
+      @include abstracts.breakpoint(sm) {
+        display: none;
+      }
 
       .nav-item {
         padding: 4px 24px;
@@ -160,6 +169,10 @@ a {
       align-items: center;
       gap: 28px;
 
+      @include abstracts.breakpoint(sm) {
+        display: none;
+      }
+
       .login__btn {
         color: var(--primary-color);
         font-weight: 600;
@@ -178,6 +191,10 @@ a {
 
     .mobile-menu {
       display: none;
+
+      @include abstracts.breakpoint(sm) {
+        display: block;
+      }
     }
   }
 
@@ -185,21 +202,45 @@ a {
     display: flex;
     gap: 130px;
 
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+      gap: 39px;
+    }
+
     .hero-media {
       display: flex;
       gap: 30px;
 
+      @include abstracts.breakpoint(sm) {
+        gap: 18px;
+      }
+
       .hero-media__left-column {
         position: relative;
+
+        @include abstracts.breakpoint(sm) {
+          .hero-img {
+            width: 160px;
+          }
+        }
 
         .hero-play-btn {
           position: absolute;
           top: 58.73%;
           left: 14.1%;
+
+          @include abstracts.breakpoint(sm) {
+            width: 115px;
+            top: 35.1%;
+          }
         }
 
         .hero-media__statistics {
           margin-top: 53px;
+
+          @include abstracts.breakpoint(sm) {
+            margin-top: 31px;
+          }
 
           .hero-media__listeners {
             margin-bottom: 10px;
@@ -207,13 +248,28 @@ a {
             font-size: 1.4rem;
             font-weight: 600;
             line-height: 1.71;
+
+            @include abstracts.breakpoint(sm) {
+              font-size: 8.306px;
+              line-height: 171.429%;
+            }
           }
 
           .hero-media__list {
             display: flex;
 
+            @include abstracts.breakpoint(sm) {
+              img {
+                width: 28px;
+              }
+            }
+
             .hero-media__item + .hero-media__item {
               margin-left: -18px;
+
+              @include abstracts.breakpoint(sm) {
+                margin-left: -10px;
+              }
             }
 
             .hero-media__item:last-child {
@@ -229,6 +285,13 @@ a {
               font-size: 1.2rem;
               font-weight: 600;
               line-height: 1.83;
+
+              @include abstracts.breakpoint(sm) {
+                width: 28px;
+                height: 28px;
+                font-size: 7.119px;
+                line-height: 183.333%;
+              }
             }
           }
         }
@@ -238,9 +301,18 @@ a {
         padding-top: 8px;
         position: relative;
 
+        @include abstracts.breakpoint(sm) {
+          padding-top: 5px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+          .hero-img {
+            width: 160px;
+          }
+        }
+
         .hero-media__statistics {
           margin: 0 0 12px 118px;
-          padding: 27px 18px;
           width: 82px;
           height: 82px;
           background-color: #ff9051;
@@ -251,11 +323,23 @@ a {
           flex-direction: column;
           gap: 4px;
 
+          @include abstracts.breakpoint(sm) {
+            margin: 0 0 7px 70px;
+            width: 48px;
+            height: 48px;
+            gap: 2px;
+          }
+
           .hero-media__numbers {
             color: #fff;
             font-size: 1.4rem;
             font-weight: 800;
             line-height: 1;
+
+            @include abstracts.breakpoint(sm) {
+              font-size: 8.306px;
+              line-height: 1;
+            }
           }
 
           .hero-media__text {
@@ -263,6 +347,11 @@ a {
             font-size: 1rem;
             font-weight: 500;
             line-height: 1;
+
+            @include abstracts.breakpoint(sm) {
+              font-size: 5.933px;
+              line-height: 1;
+            }
           }
         }
 
@@ -270,6 +359,15 @@ a {
           margin-bottom: 28px;
           display: flex;
           gap: 18px;
+
+          @include abstracts.breakpoint(sm) {
+            margin-bottom: 10px;
+            gap: 10px;
+
+            .hero-media__social-item img {
+              width: 16px;
+            }
+          }
         }
 
         .hero-media__info {
@@ -287,23 +385,45 @@ a {
           flex-direction: column;
           gap: 6px;
 
+          @include abstracts.breakpoint(sm) {
+            padding: 8px 30px;
+            border-radius: 5.34px;
+            box-shadow: 0px 7.119px 26.105px 0px rgba(0, 0, 0, 0.07);
+            backdrop-filter: blur(2.9664385318756104px);
+            bottom: 43.46%;
+          }
+
           .hero-media__name {
             color: #201830;
             font-size: 1.4rem;
             font-weight: 600;
             line-height: 1;
+
+            @include abstracts.breakpoint(sm) {
+              font-size: 8.306px;
+              line-height: 1;
+            }
           }
 
           .hero-media__position {
             color: #665f73;
             font-size: 1.2rem;
             line-height: 1;
+
+            @include abstracts.breakpoint(sm) {
+              font-size: 7.119px;
+              line-height: 1;
+            }
           }
         }
 
         .hero-decor-left,
         .hero-decor-right {
           position: absolute;
+
+          @include abstracts.breakpoint(sm) {
+            display: none;
+          }
         }
 
         .hero-decor-left {
@@ -314,6 +434,30 @@ a {
         .hero-decor-right {
           top: 22%;
           left: 58.1%;
+        }
+
+        .mobile-hero-decor-left,
+        .mobile-hero-decor-right {
+          display: none;
+          position: absolute;
+
+          @include abstracts.breakpoint(sm) {
+            display: block;
+          }
+        }
+
+        .mobile-hero-decor-left {
+          @include abstracts.breakpoint(sm) {
+            top: 9.9%;
+            right: 61.6%;
+          }
+        }
+
+        .mobile-hero-decor-right {
+          @include abstracts.breakpoint(sm) {
+            top: 22.6%;
+            right: 23.5%;
+          }
         }
       }
     }
@@ -327,6 +471,22 @@ a {
         top: 55.4%;
         left: 7%;
         z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-hero-decor-02 {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        top: 81%;
+        left: 1%;
+
+        @include abstracts.breakpoint(sm) {
+          display: block;
+        }
       }
 
       .hero-content-row {
@@ -334,6 +494,10 @@ a {
         display: flex;
         gap: 28px;
         align-items: center;
+
+        @include abstracts.breakpoint(sm) {
+          margin-top: 28px;
+        }
 
         .hero__btn {
           background: #936cdd;
@@ -366,6 +530,11 @@ a {
   padding-top: 160px;
   display: flex;
   gap: 130px;
+
+  @include abstracts.breakpoint(sm) {
+    padding-top: 100px;
+    flex-direction: column-reverse;
+  }
 
   .features-1__content {
     position: relative;

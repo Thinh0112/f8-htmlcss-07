@@ -78,6 +78,13 @@ a {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
+
+  @include abstracts.breakpoint(sm) {
+    margin-bottom: 0;
+    width: 160px;
+    font-size: 1.2rem;
+    line-height: 150%;
+  }
 }
 
 .section-desc-lv1 {
@@ -832,7 +839,8 @@ a {
 
   @include abstracts.breakpoint(sm) {
     margin-top: 100px;
-    padding: 70px 0;
+    padding: 70px 0 172px;
+    position: relative;
   }
 
   .features-3-row {
@@ -840,6 +848,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include abstracts.breakpoint(sm) {
+      margin-bottom: 38px;
+    }
 
     .features-3__heading {
       width: 390px;
@@ -851,29 +863,71 @@ a {
         top: 36%;
         right: 11%;
         z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-features-3-decor {
+        display: none;
+        position: absolute;
+        top: 73%;
+        left: 1%;
+        z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: block;
+        }
       }
     }
   }
 
   .features-3-list {
+    @include abstracts.breakpoint(sm) {
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
     .row-reverse {
       flex-direction: row-reverse;
+
+      @include abstracts.breakpoint(sm) {
+        flex-direction: row;
+      }
     }
 
     .features-3-content {
       padding-top: 30px;
       padding-bottom: 30px;
 
+      @include abstracts.breakpoint(sm) {
+        padding: 17px 0 17px 4px;
+      }
+
       .features-3-times {
         margin-bottom: 6px;
         color: #fd6f1f;
         font-size: 1.4rem;
         line-height: 1.71;
+
+        @include abstracts.breakpoint(sm) {
+          font-size: 1rem;
+          line-height: 100%;
+          margin-bottom: 7px;
+        }
       }
 
       .features-3__desc {
         margin-bottom: 11px;
         width: 270px;
+
+        @include abstracts.breakpoint(sm) {
+          margin-bottom: 7px;
+          width: 160px;
+          font-size: 1rem;
+          line-height: 180%;
+        }
       }
 
       .features-3-link {
@@ -889,19 +943,62 @@ a {
           fill: #936cdd;
         }
 
+        @include abstracts.breakpoint(sm) {
+          gap: 4px;
+
+          svg {
+            width: 10px;
+            height: 10px;
+          }
+
+          svg circle {
+            fill: #936cdd;
+          }
+        }
+
         .features-3__btn {
           color: var(--primary-color);
           font-size: 1.4rem;
           font-weight: 600;
           line-height: 1.71;
+
+          @include abstracts.breakpoint(sm) {
+            color: #936cdd;
+            font-size: 1rem;
+            line-height: 100%;
+          }
         }
       }
+    }
+  }
+
+  .features-3-media img {
+    @include abstracts.breakpoint(sm) {
+      width: 160px;
+    }
+  }
+
+  .row-no-wrap {
+    @include abstracts.breakpoint(sm) {
+      flex-wrap: nowrap;
     }
   }
 
   .features-3__dots-btn {
     display: block;
     margin: 55px auto 0;
+
+    @include abstracts.breakpoint(sm) {
+      margin: 18px auto 0;
+    }
+  }
+
+  .mobile-features-3-btn {
+    @include abstracts.breakpoint(sm) {
+      position: absolute;
+      bottom: 70px;
+      left: 18px;
+    }
   }
 }
 
@@ -910,6 +1007,10 @@ a {
   padding: 168px 0 160px;
   position: relative;
   overflow: hidden;
+
+  @include abstracts.breakpoint(sm) {
+    padding: 70px 0 100px;
+  }
 
   &::after {
     content: "";
@@ -922,11 +1023,22 @@ a {
     position: absolute;
     top: 160px;
     right: -297px;
+
+    @include abstracts.breakpoint(sm) {
+      width: 127px;
+      height: 127px;
+    }
   }
 
   .testimonial-inner {
     margin-top: 0;
     align-items: center;
+
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 28px;
+    }
 
     .testimonial__media {
       margin-top: 0;
@@ -937,17 +1049,47 @@ a {
       .testimonial-img-01 {
         position: absolute;
         z-index: 1;
+
+        @include abstracts.breakpoint(sm) {
+          width: 160px;
+        }
       }
 
       .testimonial-img-02 {
         position: relative;
         left: 200px;
+
+        @include abstracts.breakpoint(sm) {
+          width: 218px;
+          left: 121px;
+        }
       }
 
       .testimonial-dots {
         position: absolute;
         bottom: 0;
         left: 12.5%;
+
+        @include abstracts.breakpoint(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-testimonial-dots {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 65px;
+
+        @include abstracts.breakpoint(sm) {
+          display: block;
+        }
+      }
+    }
+
+    .testimonial__content {
+      @include abstracts.breakpoint(sm) {
+        // padding-left: 0;
       }
     }
 
@@ -955,31 +1097,76 @@ a {
       margin: 18px 0 38px;
       position: relative;
 
+      @include abstracts.breakpoint(sm) {
+        margin-bottom: 0;
+      }
+
       .testimonial-decor {
         position: absolute;
         top: 33%;
         left: 40%;
         z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-testimonial-decor {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        top: 27%;
+        left: 36%;
+
+        @include abstracts.breakpoint(sm) {
+          display: block;
+        }
+      }
+    }
+
+    .testimonial__desc {
+      @include abstracts.breakpoint(sm) {
+        width: 339px;
       }
     }
 
     .testimonial__name {
       margin-top: 18px;
       color: #aba6b5;
+
+      @include abstracts.breakpoint(sm) {
+        margin-top: 12px;
+      }
     }
   }
 }
 
 // Newsletter
+.newsletter__container {
+  @include abstracts.breakpoint(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .newsletter {
   padding: 100px;
   border-radius: 12px;
   background: var(--primary-color);
   position: relative;
 
+  @include abstracts.breakpoint(sm) {
+    padding: 50px 18px;
+  }
+
   .newsletter-row {
     display: flex;
     gap: 30px;
+
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+    }
 
     .newsletter__heading {
       color: #fff;

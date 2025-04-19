@@ -1166,6 +1166,7 @@ a {
 
     @include abstracts.breakpoint(sm) {
       flex-direction: column;
+      gap: 0;
     }
 
     .newsletter__heading {
@@ -1178,6 +1179,28 @@ a {
         top: 77%;
         left: -0.5%;
         z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-newsletter-decor {
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 20%;
+        z-index: -1;
+
+        @include abstracts.breakpoint(sm) {
+          display: block;
+        }
+      }
+    }
+
+    .newsletter__desc {
+      @include abstracts.breakpoint(sm) {
+        color: #aba6b5;
       }
     }
   }
@@ -1187,6 +1210,12 @@ a {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+
+    @include abstracts.breakpoint(sm) {
+      margin-top: 38px;
+      flex-direction: column;
+      gap: 12px;
+    }
 
     .newsletter-name__input,
     .newsletter-email__input {
@@ -1206,6 +1235,10 @@ a {
     .newsletter__btn {
       background: #936cdd;
       flex-shrink: 0;
+
+      @include abstracts.breakpoint(sm) {
+        margin-top: 6px;
+      }
     }
   }
 
@@ -1213,6 +1246,10 @@ a {
   .newsletter-star-2,
   .newsletter-star-3 {
     position: absolute;
+
+    @include abstracts.breakpoint(sm) {
+      display: none;
+    }
   }
 
   .newsletter-star-1 {
@@ -1229,6 +1266,17 @@ a {
     left: 35px;
     bottom: 45px;
   }
+
+  .mobile-newsletter-stars {
+    display: none;
+    position: absolute;
+    bottom: 11px;
+    right: 34px;
+
+    @include abstracts.breakpoint(sm) {
+      display: block;
+    }
+  }
 }
 
 // Footer
@@ -1236,13 +1284,27 @@ a {
   padding: 104px 0 30px;
   background-color: #fff8f3;
 
+  @include abstracts.breakpoint(sm) {
+    padding: 54px 0 50px;
+  }
+
   .footer-inner {
     display: flex;
     gap: 116px;
 
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+      gap: 38px;
+    }
+
     .footer__copyright {
       margin: 14px 0 18px;
       width: 270px;
+
+      @include abstracts.breakpoint(sm) {
+        font-size: 1.6rem;
+        line-height: 175%;
+      }
     }
   }
 
@@ -1250,9 +1312,19 @@ a {
     display: flex;
     gap: 90px;
 
+    @include abstracts.breakpoint(sm) {
+      flex-direction: column;
+      gap: 38px;
+    }
+
     .footer__heading {
       margin-bottom: 24px;
       width: auto;
+
+      @include abstracts.breakpoint(sm) {
+        font-size: 2rem;
+        line-height: 150%;
+      }
     }
 
     .footer-list {
